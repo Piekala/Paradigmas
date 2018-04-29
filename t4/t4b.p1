@@ -1,0 +1,34 @@
+/*
+
+Trabalho 4: Resolvendo problemas da OBI em Prolog
+Leonardo Piekala Severo
+
+Condomınio colorido
+Um condom´ınio composto por exatamente seis casas, R, S, W, X, Y e Z, decidiu pintar todas as casas,
+com a condi¸c˜ao de que casas vizinhas n˜ao podem ter a mesma cor. As ´unicas casas vizinhas s˜ao as
+seguintes:
+• R, S, X e Y s˜ao vizinhas de W.
+• X ´e vizinha de Y.
+• R e S s˜ao vizinhas de Z.
+
+*/
+regra1([]) :-
+   vizinha(w,r),
+   vizinha(r,2),
+   vizinha(w,s);vizinha(s,w),
+   vizinha(w,x);vizinha(x,w),
+   vizinha(w,y);vizinha(y,w).
+
+regra2([]) :-
+vizinha(x,y);vizinha(y,x).
+
+regra3([]) :-
+vizinha(z,r);vizinha(r,z),
+vizinha(z,s);vizinha(s,z).
+
+pintura(L) :-
+L = [r,s,w,x,y,z],
+permutation(L,A),
+regra1(A),
+regra2(A),
+regra3(A).
