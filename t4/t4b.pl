@@ -47,3 +47,28 @@ bolsa(X):-
    regra3(X),
    regra4(X),
    regra5(X).
+
+
+/*
+Quest˜ao 1. Qual das alternativas seguintes po-
+deria ser uma lista completa e correta da ordem
+em que as alunas s˜ao entrevistadas, da primeira `a
+´ultima?
+(A) Hebe, Lia, Kia, Gal, Faf´a, Juju, Isa
+(B) Isa, Faf´a, Gal, Juju, Kia, Hebe, Lia
+(C) Isa, Hebe, Lia, Gal, Juju, Faf´a, Kia
+(D) Isa, Hebe, Gal, Juju, Faf´a, Kia, Lia
+(E) Gal, Hebe, Lia, Juju, Isa, Kia, Faf´a
+*/
+
+questao1(L):-
+   bolsa(L).
+
+/*
+?-questao1([h,l,k,g,f,j,i]).
+?-questao1([i,f,g,j,k,h,l]).
+?-questao1([i,h,l,g,j,f,k]).
+?-questao1([i,h,g,j,f,k,l]).
+?-questao1([g,h,l,j,i,k,f]).
+resposta:c.
+*/
