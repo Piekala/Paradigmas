@@ -37,7 +37,7 @@ regra4(L):-
 regra5(L):-
    nth0(PosJuju, L, j),
    nth0(PosKia, L, k),
-   PosJuju =\= PosKia-1;
+   PosJuju =\= PosKia-1,
    PosJuju =\= PosKia+1.
 
 
