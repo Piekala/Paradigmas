@@ -25,20 +25,20 @@ regra2(L):-
    L = [_,_,_,j,_,_,_].
 
 regra3(L):-
-   nth0(posLia, L, l),
-   nth0(posHebe, L, h),
-   posHebe =:= posLia-1.
+   nth0(PosLia, L, l),
+   nth0(PosHebe, L, h),
+   PosHebe =:= PosLia-1.
 
 regra4(L):-
-   nth0(posGal, L, g),
-   nth0(posKia, L, k),
-   posGal < posKia.
+   nth0(PosGal, L, g),
+   nth0(PosKia, L, k),
+   PosGal < PosKia.
 
 regra5(L):-
-   nth0(posJuju, L, j),
-   nth0(posKia, L, k),
-   posJuju =\= posKia-1;
-   posJuju =\= posKia+1.
+   nth0(PosJuju, L, j),
+   nth0(PosKia, L, k),
+   PosJuju =\= PosKia-1;
+   PosJuju =\= PosKia+1.
 
 
 bolsa(X):-
