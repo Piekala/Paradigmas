@@ -1,36 +1,4 @@
 abstract class bloco {
-  int tipo;
-  public abstract bloco quebra();
-}
-
-class madeira extends bloco {
-  public madeira(){
-    tipo = 1;
-  }
-  public bloco quebra(){
-    System.out.println("Você quebrou uma madeira e recebeu uma madeira\n");
-    madeira m = new madeira();
-    return m;
-  }
-}
-
-class terra extends bloco {
-  public terra(){
-    tipo = 2;
-  }
-  public bloco quebra(){
-    System.out.println("Você quebrou uma terra e recebeu uma terra\n");
-    terra t = new terra();
-    return t;
-  }
-}
-
-class grama extends bloco{
-  public grama(){
-    tipo = 3;
-  }
-  public bloco quebra(){
-abstract class bloco {
   protected int tipo;
   public abstract bloco quebra();
 }
@@ -82,5 +50,13 @@ class pedra extends bloco {
   public bloco quebra(){
     System.out.println("Você quebrou uma pedra e recebeu um pedregulho\n");
     return new pedregulho();
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+   bloco block[] = {new madeira, new terra, new grama, new pedregulho, new pedra};
+   for (bloco b: block)
+     b = b.quebra();
   }
 }
