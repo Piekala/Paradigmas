@@ -55,7 +55,7 @@ class pedra extends bloco {
 
 class Main {
   public static void main(String[] args) {
-   bloco block[] = {new madeira, new terra, new grama, new pedregulho, new pedra};
+   bloco block[] = {new madeira(), new terra(), new grama(), new pedregulho(), new pedra()};
    for (bloco b: block)
      b = b.quebra();
   }
